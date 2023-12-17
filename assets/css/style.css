@@ -1,6 +1,7 @@
 :root {
     --dark: #31343d;
     --teal: #91cbcc; 
+    --blue: #445876; 
 }
 
 * {
@@ -17,13 +18,15 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    padding: .25vw .25vw .25vw 5vw;
+    padding: .25vw 1vw .25vw 5vw;
     color: var(--dark);
     background-color: var(--teal);
+    border: 1px solid var(--teal);
+    border-radius: 0px 30px 30px 0px;
 }
 
 nav {
-    margin-right: 1.25vw;
+    margin-right: 2vw;
 }
 
 nav ul {
@@ -38,6 +41,8 @@ nav ul li a {
     font-size: 1.15em;
     font-weight: 800;
     color: white; 
+    position: relative;
+    top: 1vw;
 }
 
 nav ul li a:hover {
@@ -45,22 +50,40 @@ nav ul li a:hover {
     line-height: 1.5em;
 }
 
+section {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
 #about {
     display: flex;
 }
 
 #about h2 {
-    flex: 25%;
+    flex: 1;
+    font-size: 2.5em;
     text-align: right;
     padding: 2vh;
-    border-right: 5px solid black;
+    color: var(--blue);
+    border-right: 5px solid var(--blue);
+    border-radius: 30px;
 }
 
 #about img {
-    padding: 10px;
-    max-width: 500px;
+    flex: 4;
+    margin: 2vw;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 30px;
 }
 
 #about p {
-    flex: 25%;
+    flex: 4;
+    padding: 3vh;
+    margin-right: 1vh;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--dark);
+    background: #a3b7cc;
+    border-radius: 30px;
 }
