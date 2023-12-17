@@ -1,7 +1,7 @@
 :root {
     --dark: #31343d;
-    --teal: #91cbcc; 
-    --blue: #445876; 
+    --teal: #91cbcc;
+    --blue: #445876;
 }
 
 * {
@@ -35,14 +35,19 @@ nav ul {
 
 nav ul li {
     margin: 10px;
-    }
+}
 
 nav ul li a {
     font-size: 1.15em;
     font-weight: 800;
-    color: white; 
+    color: white;
     position: relative;
     top: 1vw;
+}
+
+nav ul li a:visited {
+    color: white;
+    line-height: 1.5em;
 }
 
 nav ul li a:hover {
@@ -52,14 +57,15 @@ nav ul li a:hover {
 
 section {
     margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
 }
 
 #about {
     display: flex;
+    justify-content: space-between;
 }
 
-#about h2 {
+h2 {
     flex: 1;
     font-size: 2.5em;
     text-align: right;
@@ -77,13 +83,76 @@ section {
     border-radius: 30px;
 }
 
-#about p {
+#abouttext {
     flex: 4;
     padding: 3vh;
     margin-right: 1vh;
-    font-size: 1.5em;
-    font-weight: 500;
-    color: var(--dark);
     background: #a3b7cc;
     border-radius: 30px;
+}
+
+#about p {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: var(--dark);
+}
+
+
+#portfolio {
+    display: flex;
+    justify-content: space-between;
+}
+
+#workexamples {
+    flex: 8;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#workexamples article {
+    flex-shrink: 2;
+}
+
+a img {
+    max-width: 500px;
+}
+
+#contact {
+    display: flex;
+}
+
+#contact ul {
+    flex: 8;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact ul li {
+    font-size: 1.15em;
+    font-weight: 800;
+    color: var(--blue);
+    position: relative;
+    margin: auto 0;
+}
+
+#contact ul li a:visited {
+    color: var(--blue);
+}
+
+#contact ul li a:hover {
+    color: var(--teal);
+}
+
+footer {
+    background-color: var(--dark);
+}
+
+footer p {
+    width: fit-content;
+    padding: 2vw 0;
+    margin: 0 auto;
+    font-size: 1.15em;
+    font-weight: 800;
+    color: white;
 }
