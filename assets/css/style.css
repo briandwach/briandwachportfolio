@@ -2,6 +2,7 @@
     --dark: #31343d;
     --teal: #91cbcc;
     --blue: #445876;
+    --lightblue: #a3b7cc;
 }
 
 * {
@@ -9,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* Header Section */
 header {
     padding: 1.005vw 0px 1.005vw 0px;
     background: var(--dark);
@@ -55,39 +57,40 @@ nav ul li a:hover {
     line-height: 1.5em;
 }
 
+/* This selector styles all the section elements */
 section {
     margin-top: 1vw;
     margin-bottom: 2vw;
 }
 
+/* About Section */
 #about {
     display: flex;
     justify-content: space-between;
 }
 
 h2 {
-    flex: 1;
+    min-width: 230px;
     font-size: 2.5em;
     text-align: right;
-    padding: 2vh;
+    padding: 2vw;
     color: var(--blue);
     border-right: 5px solid var(--blue);
     border-radius: 30px;
 }
 
 #about img {
-    flex: 4;
-    margin: 2vw;
+    margin: auto 2vw;
+    height: fit-content;
     min-width: 250px;
     max-width: 350px;
     border-radius: 30px;
 }
 
 #abouttext {
-    flex: 4;
-    padding: 3vh;
-    margin-right: 1vh;
-    background: #a3b7cc;
+    padding: 3vw;
+    margin-right: 1vw;
+    background: var(--lightblue);
     border-radius: 30px;
 }
 
@@ -98,32 +101,67 @@ h2 {
     color: var(--dark);
 }
 
+/* Portfolio Section */
+.workimage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
 
 #portfolio {
     display: flex;
-    justify-content: space-between;
 }
 
-#workexamples {
-    flex: 8;
+.workexamples {
     display: flex;
     flex-wrap: wrap;
+    margin: 0vw 1vw 0vw 0vw;
 }
 
-#workexamples article {
-    flex-shrink: 2;
+.workexamples article {
+    border: 12px solid var(--lightblue);
+    background-color: var(--lightblue);
+    border-radius: 30px;
+    width: 47%;
+    margin: 0vw 0vw 1vw 1vw;
+    position: relative;   
 }
 
-a img {
-    max-width: 500px;
+.tag {
+    background-color: var(--lightblue);
+    position: absolute;
+    bottom: 3vw;
+    padding-left: 1vw;
+    border: 5px solid var(--lightblue);
+    border-radius: 0px 30px 30px 0px;
 }
 
+h3 {
+    color: var(--dark);
+    font-size: 2em;
+    font-weight: 800;
+    padding: 1vw 1vw 1vw 0vw;
+}
+
+h4 {
+    color: var(--blue);
+    font-size: 1em;
+    font-weight: 800;
+    padding-bottom: 1vh;
+}
+
+#refactor {
+    width: 100%;
+}
+
+/* Contact Section */
 #contact {
     display: flex;
+    align-items: center;
 }
 
 #contact ul {
-    flex: 8;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -132,8 +170,6 @@ a img {
     font-size: 1.15em;
     font-weight: 800;
     color: var(--blue);
-    position: relative;
-    margin: auto 0;
 }
 
 #contact ul li a:visited {
@@ -144,6 +180,7 @@ a img {
     color: var(--teal);
 }
 
+/* Footer Section */
 footer {
     background-color: var(--dark);
 }
