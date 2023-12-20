@@ -25,6 +25,7 @@ header h1 {
     background-color: var(--teal);
     border: 1px solid var(--teal);
     border-radius: 0px 30px 30px 0px;
+    width: fit-content;
 }
 
 nav {
@@ -37,24 +38,24 @@ nav ul {
 
 nav ul li {
     margin: 10px;
+    position: relative;
+    top: 1vw;
 }
 
 nav ul li a {
     font-size: 1.15em;
     font-weight: 800;
-    color: white;
-    position: relative;
-    top: 1vw;
+    color: white; 
 }
 
 nav ul li a:visited {
     color: white;
-    line-height: 1.5em;
 }
 
 nav ul li a:hover {
     color: var(--teal);
-    line-height: 1.5em;
+    position: relative;
+    top: .5vh;
 }
 
 /* This selector styles all the section elements */
@@ -89,7 +90,7 @@ h2 {
 
 #abouttext {
     padding: 3vw;
-    margin-right: 1vw;
+    margin-right: 2.5vw;
     background: var(--lightblue);
     border-radius: 30px;
 }
@@ -122,9 +123,9 @@ h2 {
     border: 12px solid var(--lightblue);
     background-color: var(--lightblue);
     border-radius: 30px;
-    width: 47%;
+    width: 48%;
     margin: 0vw 0vw 1vw 1vw;
-    position: relative;   
+    position: relative;
 }
 
 .tag {
@@ -151,7 +152,8 @@ h4 {
 }
 
 #refactor {
-    width: 100%;
+    width: 97%;
+    margin-right: 1vw;
 }
 
 /* Contact Section */
@@ -167,7 +169,7 @@ h4 {
 }
 
 #contact ul li {
-    font-size: 1.15em;
+    font-size: 1.5em;
     font-weight: 800;
     color: var(--blue);
 }
@@ -192,4 +194,95 @@ footer p {
     font-size: 1.15em;
     font-weight: 800;
     color: white;
+}
+
+/* Media Queries */
+
+/* Portfolio section responds first when screen width is 1350px or less
+Examples works collapse into a column */
+@media screen and (max-width: 1350px) {
+    #portfolio {
+        flex-direction: column;
+        margin: 1vh 1vw 0vw 2vw;
+    }
+
+    #portfolio h2 {
+        text-align: left;
+        border-right: 0px;
+        border-bottom: 5px solid var(--blue);
+        min-width: 0px;
+    }
+
+    .workexamples article {
+        width: 100%;
+        margin: 3vh 0vw 0vw 0vw;
+    }
+
+    #refactor {
+        width: 100%;
+        margin-right: 0vw;
+    }
+
+    #doordie {
+        margin-bottom: 2vh;
+    }
+}
+
+/* About section and contact section respond second when screen width is 1075px or less
+Content collapses into columns */
+@media screen and (max-width: 1075px) {
+    #about,
+    #contact {
+        flex-direction: column;
+        margin: 1vh 2vw 0vw 2vw;
+    }
+
+    h2 {
+        text-align: left;
+        border-right: 0px;
+        border-bottom: 5px solid var(--blue);
+        min-width: 0px;
+    }
+
+    #about img,
+    #abouttext,
+    #context {
+        margin: 1vh auto;
+    }
+
+    #abouttext {
+        margin-bottom: 3vh;
+    }
+
+    #contact {
+        align-items: normal;
+    }
+
+    #contact ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact ul li {
+        margin: 2vh 0vh 2vh 0vh;
+    }
+
+}
+
+/* Header and navigation bar respond last when the screen width is 675px or less
+H1 and nav links collapse into columns */
+@media screen and (max-width: 675px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li a:hover {
+        color: var(--teal);
+        position: relative;
+        top: 0vh;
+    }
 }
