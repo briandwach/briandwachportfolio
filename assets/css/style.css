@@ -81,8 +81,11 @@ h2 {
 
 #about img {
     margin: auto 2vw;
-    height: fit-content;
-    min-width: 250px;
+    /* On mobile the headshot img was stretching the height.  
+    Trying the below code instead */
+    height: auto;
+    /*height: fit-content;
+    min-width: 250px; */
     max-width: 350px;
     border-radius: 30px;
 }
