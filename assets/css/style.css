@@ -1,3 +1,4 @@
+/* Global variables are used to define the color scheme for the web application */
 :root {
     --dark: #31343d;
     --teal: #91cbcc;
@@ -27,6 +28,7 @@ header h1 {
     width: fit-content;
 }
 
+/* Navigation section */
 nav {
     margin-right: 2vw;
 }
@@ -69,6 +71,7 @@ section {
     justify-content: space-between;
 }
 
+/* The h2 stylings below impact the elements on the left side of the web page */
 h2 {
     min-width: 230px;
     font-size: 2.5em;
@@ -226,7 +229,7 @@ footer p {
 /* Media Queries */
 
 /* Portfolio section responds first when screen width is 1350px or less
-Examples works collapse into a column */
+Example works collapse into a column */
 @media screen and (max-width: 1350px) {
     #portfolio {
         flex-direction: column;
